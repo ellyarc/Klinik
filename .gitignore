@@ -1,0 +1,12 @@
+# Hasil kompilasi
+*.class
+target/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Sistem operasi
+.DS_Store
+Thumbs.db
