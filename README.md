@@ -38,10 +38,12 @@ klinik/
 ## Cara menjalankan
 
 1. Pasang Java 21 dan MySQL.
-2. Buat database kosong bernama `klinik`:
-   ```sql
-   CREATE DATABASE klinik;
-   ```
+2. Siapkan database `klinik`, pilih salah satu:
+   - **Dengan data contoh:** di phpMyAdmin buka tab **Import** dan pilih `database/klinik.sql`. File ini membuat database `klinik`, tabelnya, dan data contoh fiktif (4 dokter, 2 pasien, 1 transaksi). Akun contoh: `pasien1` / `demo123` atau `pasien2` / `demo123`.
+   - **Kosong:** cukup buat database kosong, tabel dibuat otomatis oleh aplikasi saat pertama dijalankan.
+     ```sql
+     CREATE DATABASE klinik;
+     ```
 3. Sesuaikan `klinik/src/main/resources/application.properties` jika user atau password MySQL kamu berbeda. Bawaannya user `root` tanpa password di `localhost:3306`.
 4. Jalankan dari folder `klinik/`:
    ```bash
@@ -49,7 +51,7 @@ klinik/
    ```
 5. Buka <http://localhost:8085>.
 
-Tabel dibuat otomatis saat aplikasi pertama kali dijalankan (`spring.jpa.hibernate.ddl-auto=update`).
+Tabel juga dibuat otomatis saat aplikasi pertama kali dijalankan (`spring.jpa.hibernate.ddl-auto=update`).
 
 ## Catatan
 
